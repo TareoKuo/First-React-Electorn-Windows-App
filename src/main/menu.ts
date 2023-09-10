@@ -184,9 +184,9 @@ export default class MenuBuilder {
     };
 
     const subMenuView =
-      process.env.NODE_ENV === 'development' ||
-      process.env.DEBUG_PROD === 'true'
-        ? subMenuViewDev
+      process.env.NODE_ENV === 'development' || // 用於區分應用程式的執行環境，通常用來區分開發模式和生產模式。
+      process.env.DEBUG_PROD === 'true' // 是一個自定義的環境變數，用於啟用或禁用生產模式的調試功能。
+        ? subMenuViewDev 
         : subMenuViewProd;
 
     return [subMenuAbout, subMenuEdit, subMenuView, subMenuWindow, subMenuHelp];

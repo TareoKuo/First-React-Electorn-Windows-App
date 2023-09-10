@@ -170,7 +170,7 @@
     "webpack-merge": "^5.9.0"
   },
   "build": {
-    "productName": "ElectronReact",
+    "productName": "MyFirstApp-v.1.0.0",
     "appId": "org.erb.ElectronReact",
     "asar": true,
     "asarUnpack": "**\\*.{node,dll}",
@@ -179,6 +179,7 @@
       "node_modules",
       "package.json"
     ],
+    "artifactName" : "${productName} Setup.${ext}",
     "afterSign": ".erb/scripts/notarize.js",
     "mac": {
       "target": {
