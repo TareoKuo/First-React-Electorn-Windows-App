@@ -1,11 +1,11 @@
-import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import icon from '../../assets/icon.svg';
 import './App.css';
 
-function Hello() {
+function FrontPage() {
   return (
     <div>
-      <div className="Hello">
+      <div className="FrontPage">
         <img width="200" alt="icon" src={icon} />
       </div>
       <h1>electron-react-boilerplate</h1>
@@ -34,16 +34,36 @@ function Hello() {
             Donate
           </button>
         </a>
+        <Link to={"/Second"}>到第二頁</Link>
       </div>
     </div>
   );
+}
+
+const SecondPage = () =>{
+  const StyleSheet: React.CSSProperties = {
+      width: "100vw",
+      height: "100vh",
+      backgroundColor: "#08D9D6",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      flexDirection: "column"
+  }
+  return(
+      <div style={StyleSheet}>
+          <h1 style={{color:"white",fontFamily:"Microsoft JhengHei"}}>我是第二頁</h1>
+          <Link to={"/"}>到第一頁</Link>
+      </div>
+  )
 }
 
 export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Hello />} />
+        <Route path="/" element={<FrontPage />} />
+        <Route path="/Second" element={<SecondPage />} />
       </Routes>
     </Router>
   );
