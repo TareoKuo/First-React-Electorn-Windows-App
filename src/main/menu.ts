@@ -197,10 +197,10 @@ export default class MenuBuilder {
       {
         label: '&File',
         submenu: [
-          {
-            label: '&Open',
-            accelerator: 'Ctrl+O',
-          },
+          // {
+          //   label: '&Open',
+          //   accelerator: 'Ctrl+O',
+          // },
           {
             label: '&Close',
             accelerator: 'Ctrl+W',
@@ -279,6 +279,12 @@ export default class MenuBuilder {
             label: 'Search Issues',
             click() {
               shell.openExternal('https://github.com/electron/electron/issues');
+            },
+          },
+          {
+            label: 'Tareo Github',
+            click() {
+              shell.openExternal('https://github.com/TareoKuo/First-React-Electorn-Windows-App');
             },
           },
         ],
