@@ -1,6 +1,14 @@
 import { Link } from 'react-router-dom';
 import './Systeminfo.css';
 
+// const ffi = window.require("ffi-napi")
+// const ref = require('ref-napi');
+// const libm  = new ffi.Library('./Dll1.dll', {
+//     'get_cpu_info':[ 'string',[]]
+// });
+const CpuName: string = "test"
+// console.log(libm.get_cpu_info())
+
 const Systeminfo = () => {
     const lefttop: React.CSSProperties = {
         position: 'fixed',
@@ -16,7 +24,7 @@ const Systeminfo = () => {
         fontFamily: 'DFKai-sb'
     }
 
-    let CpuName: string = "HelloWorld!!!"
+    // let CpuName: string = "HelloWorld!!!"
 
     return (
         <div>
