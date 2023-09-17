@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
 import './Systeminfo.css';
 
-// const ffi = window.require("ffi-napi")
-// const ref = require('ref-napi');
+// const ffi = require("ffi-napi")
 // const libm  = new ffi.Library('./Dll1.dll', {
 //     'get_cpu_info':[ 'string',[]]
 // });

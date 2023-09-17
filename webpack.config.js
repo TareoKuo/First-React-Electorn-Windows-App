@@ -1,15 +1,22 @@
+const path = require("path");
+const webpack = require("webpack");
+
 module.exports = {
-  entry: "./main/main.ts",
+  entry: ["./src/main/main.ts"],
+  target: "node",
+  mode: "development",
+  output: {
+    path: path.resolve(__dirname, "build"),
+    filename: "bundle.js"
+  },
   resolve: {
     fallback: {
-      "assert": require.resolve('assert/'),
-      "path": require.resolve('path-browserify'),
       "os": require.resolve("os-browserify/browser"),
-      "util": require.resolve('util/'),
-      "fs": false,  // 使用此配置表示不提供 fs 模块，你也可以尝试 require.resolve('fs') 作为替代
+      "fs": false // 如果不需要 fs，可以将其设为 false
     }
   },
-  // "externals": {
-  //   "fs": 'require("fs")',
-  // },
+  module: {
+    rules: [{ test: /\.js$/, use: "babel-loader", exclude: /node_modules/ }]
+  },
+  plugins: [new webpack.ExternalsPlugin("commonjs", ["leveldown"])]
 };
