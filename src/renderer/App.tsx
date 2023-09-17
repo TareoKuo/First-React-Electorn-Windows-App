@@ -1,70 +1,49 @@
 import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import icon from '../../assets/icon.svg';
+import Systeminfo from "./Systeminfo";
+import Undefined from "./Undefined";
 import './App.css';
 
 function FrontPage() {
   return (
     <div>
-      <div className="FrontPage">
-        <img width="200" alt="icon" src={icon} />
+      <div className="Function">
+        <a
+          href="https://github.com/TareoKuo/First-React-Electorn-Windows-App"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <button type="button" className='buttonclick'>
+            Tareo Github
+          </button>
+        </a>
       </div>
-      <h1>electron-react-boilerplate</h1>
-      <div className="Hello">
-        <a
-          href="https://electron-react-boilerplate.js.org/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button type="button">
-            <span role="img" aria-label="books">
-              📚
-            </span>
-            Read our docs
+      <div className="Function">
+        <Link to={"/Systeminfo"}>
+          <button type="button" className='buttonclick'>
+            Systeminfo
           </button>
-        </a>
-        <a
-          href="https://github.com/sponsors/electron-react-boilerplate"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button type="button">
-            <span role="img" aria-label="folded hands">
-              🙏
-            </span>
-            Donate
+        </Link>
+        <Link to={"/Undefined"}>
+          <button type="button" className='buttonclick'>
+            Undefind
           </button>
-        </a>
-        <Link to={"/Second"}>到第二頁</Link>
+        </Link>
       </div>
     </div>
   );
 }
 
-const SecondPage = () =>{
-  const StyleSheet: React.CSSProperties = {
-      width: "100vw",
-      height: "100vh",
-      backgroundColor: "#08D9D6",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      flexDirection: "column"
-  }
-  return(
-      <div style={StyleSheet}>
-          <h1 style={{color:"white",fontFamily:"Microsoft JhengHei"}}>我是第二頁</h1>
-          <Link to={"/"}>到第一頁</Link>
-      </div>
-  )
-}
-
 export default function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<FrontPage />} />
-        <Route path="/Second" element={<SecondPage />} />
-      </Routes>
-    </Router>
+    <div>
+      <h1 className='AppName' style={{fontFamily: 'DFKai-sb'}}>Tareo study Windows App</h1>
+      <Router>
+        <Routes>
+          <Route path="/" element={<FrontPage />} />
+          <Route path="/Systeminfo" element={<Systeminfo />} />
+          <Route path="/Undefined" element={<Undefined />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
