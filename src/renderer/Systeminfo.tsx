@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom';
 import './Systeminfo.css';
+const ffi = require("ffi-napi");
 
-// const ffi = require("ffi-napi")
+
 // const libm  = new ffi.Library('./Dll1.dll', {
 //     'get_cpu_info':[ 'string',[]]
 // });
-const CpuName: string = "test"
-// console.log(libm.get_cpu_info())
+
+let CpuName: string = "HelloWorld!!!"
 
 const Systeminfo = () => {
     const lefttop: React.CSSProperties = {
@@ -23,7 +24,6 @@ const Systeminfo = () => {
         fontFamily: 'DFKai-sb'
     }
 
-    // let CpuName: string = "HelloWorld!!!"
 
     return (
         <div>
