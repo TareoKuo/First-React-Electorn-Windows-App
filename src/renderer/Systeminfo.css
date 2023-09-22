@@ -1,0 +1,67 @@
+.buttonclick_systeminfo {
+    background-color: white;
+    /* padding: 30px 30px; */
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    appearance: none;
+    font-size: 1.3rem;
+    box-shadow: 0px 8px 28px -6px rgba(24, 39, 75, 0.12),
+      0px 18px 88px -4px rgba(24, 39, 75, 0.14);
+    transition: all ease-in 0.1s;
+    cursor: pointer;
+    opacity: 0.9;
+    font-family: 'DFKai-sb'
+}
+
+.buttonclick_systeminfo:hover { /* hover 鼠標懸停在上面的標示 */
+    transform: scale(1.05); /* 縮放 */
+    opacity: 1; /* 透明度 */
+}
+
+.Systeminfo {
+    height: 560px;
+    width: 900px;
+    margin-top: 40px;
+    background-color: #D2E9FF;
+    font-family: 'DFKai-sb'
+}
+
+/*
+fixed 將元素固定在視口中的位置，不受滾動影響。
+relative 將元素相對於其原始位置進行定位，保留原始佔用空間。
+*/
+/* font-family: 'DFKai-sb' */
+.Systeminfo_content {
+    position: fixed;
+    border: 1.5px solid black;
+    padding: 70px;
+    width: 850px;
+    height: 40px;
+    margin-left: 25px;
+    margin-top: 25px;
+    box-sizing: border-box;
+}
+
+.Systeminfo_content2 {
+    position: fixed;
+    border: 1.5px solid black;
+    padding: 70px;
+    width: 850px;
+    height: 40px;
+    margin-left: 25px;
+    margin-top: 190px;
+    box-sizing: border-box;
+}
+
+.Systeminfo_content .title,
+.Systeminfo_content2 .title {
+    position: absolute;
+    top: -1em;
+    left: 10%;
+    line-height: 2em;
+    padding: 0 1em;
+    color: black;
+    background-color: #D2E9FF;
+}

@@ -1,39 +1,33 @@
-import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
-import icon from '../../assets/icon.svg';
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Systeminfo from "./Systeminfo";
+import Undefined from "./Undefined";
 import './App.css';
 
-function Hello() {
+function FrontPage() {
   return (
     <div>
-      <div className="Hello">
-        <img width="200" alt="icon" src={icon} />
+      <div className="Function">
+        <a
+          href="https://github.com/TareoKuo/First-React-Electorn-Windows-App"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <button type="button" className='buttonclick'>
+            Tareo Github
+          </button>
+        </a>
       </div>
-      <h1>electron-react-boilerplate</h1>
-      <div className="Hello">
-        <a
-          href="https://electron-react-boilerplate.js.org/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button type="button">
-            <span role="img" aria-label="books">
-              📚
-            </span>
-            Read our docs
+      <div className="Function">
+        <Link to={"/Systeminfo"}>
+          <button type="button" className='buttonclick'>
+            Systeminfo
           </button>
-        </a>
-        <a
-          href="https://github.com/sponsors/electron-react-boilerplate"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button type="button">
-            <span role="img" aria-label="folded hands">
-              🙏
-            </span>
-            Donate
+        </Link>
+        <Link to={"/Undefined"}>
+          <button type="button" className='buttonclick'>
+            Undefind
           </button>
-        </a>
+        </Link>
       </div>
     </div>
   );
@@ -41,10 +35,15 @@ function Hello() {
 
 export default function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Hello />} />
-      </Routes>
-    </Router>
+    <div>
+      <h1 className='AppName' style={{fontFamily: 'DFKai-sb'}}>Tareo study Windows App</h1>
+      <Router>
+        <Routes>
+          <Route path="/" element={<FrontPage />} />
+          <Route path="/Systeminfo" element={<Systeminfo />} />
+          <Route path="/Undefined" element={<Undefined />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }

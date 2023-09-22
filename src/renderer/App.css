@@ -6,12 +6,8 @@ body {
   position: relative;
   color: white;
   height: 100vh;
-  background: linear-gradient(
-    200.96deg,
-    #fedc2a -29.09%,
-    #dd5789 51.77%,
-    #7a2c9e 129.35%
-  );
+  /* 背景漸層 */
+  background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
   font-family: sans-serif;
   overflow-y: hidden;
   display: flex;
@@ -19,9 +15,11 @@ body {
   align-items: center;
 }
 
-button {
+.buttonclick {
   background-color: white;
-  padding: 10px 20px;
+  /* padding: 30px 30px; */
+  width: 200px;
+  height: 100px;
   border-radius: 10px;
   border: none;
   appearance: none;
@@ -31,11 +29,12 @@ button {
   transition: all ease-in 0.1s;
   cursor: pointer;
   opacity: 0.9;
+  font-family: 'DFKai-sb'
 }
 
-button:hover {
-  transform: scale(1.05);
-  opacity: 1;
+.buttonclick:hover { /* hover 鼠標懸停在上面的標示 */
+  transform: scale(1.05); /* 縮放 */
+  opacity: 1; /* 透明度 */
 }
 
 li {
@@ -54,9 +53,21 @@ a:hover {
   text-decoration: none;
 }
 
-.Hello {
+.Function {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 20px 0;
+}
+
+.AppName {
+  position: fixed;
+  top: 0;
+  left: 10px;
+}
+
+.back{
+  position: fixed;
+  top: 20px;
+  right: 10px;
 }
