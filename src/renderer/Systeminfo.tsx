@@ -1,5 +1,10 @@
 import { Link } from 'react-router-dom';
 import './Systeminfo.css';
+
+import testok from '../../release/app/test';
+testok();
+
+
 // import * as ffi from "ffi-napi";
 
 // console.log("HIIIIIIIIIIIIIIIII");

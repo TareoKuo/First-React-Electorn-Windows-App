@@ -15,6 +15,9 @@ import log from 'electron-log';
 import MenuBuilder from './menu';
 import { resolveHtmlPath } from './util';
 
+import installExtension, { REACT_DEVELOPER_TOOLS, REDUX_DEVTOOLS } from 'electron-devtools-assembler';
+
+
 class AppUpdater {
   constructor() {
     log.transports.file.level = 'info';
@@ -43,8 +46,12 @@ if (isDebug) {
   require('electron-debug')();
 }
 
+installExtension([REDUX_DEVTOOLS, REACT_DEVELOPER_TOOLS])
+  .then((name) => console.log(`Added Extension:  ${name}`))
+  .catch((err) => console.log('An error occurred: ', err));
+
 const installExtensions = async () => {
-  const installer = require('electron-devtools-installer');
+  const installer = require('electron-devtools-assembler');
   const forceDownload = !!process.env.UPGRADE_EXTENSIONS;
   const extensions = ['REACT_DEVELOPER_TOOLS'];
 
