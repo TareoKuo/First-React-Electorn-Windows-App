@@ -28,6 +28,10 @@ const configuration: webpack.Configuration = {
           },
         },
       },
+      {
+        test: /\.node$/,
+        loader: 'file-loader',
+      },
     ],
   },
 

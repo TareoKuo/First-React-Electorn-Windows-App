@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C:">
+      <UniqueIdentifier>{7B735499-E5DD-1C2B-6C26-70023832A1CF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C:\Users">
+      <UniqueIdentifier>{E9F714C1-DA89-54E2-60CF-39FEB20BF756}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C:\Users\kty89">
+      <UniqueIdentifier>{E0D677BD-B6F9-9D30-EE92-AC2687BC3B5B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C:\Users\kty89\Desktop">
+      <UniqueIdentifier>{B23D6E4D-7634-EF57-62FC-46A6189C0B6E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C:\Users\kty89\Desktop\React Electron Test">
+      <UniqueIdentifier>{A3E88F38-3439-63C8-15FF-5AB7AF4DE210}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C:\Users\kty89\Desktop\React Electron Test\First-React-Electorn-Windows-App">
+      <UniqueIdentifier>{8EB473A5-9EC2-0D6F-FC7C-6207DC0C615B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C:\Users\kty89\Desktop\React Electron Test\First-React-Electorn-Windows-App\node_modules">
+      <UniqueIdentifier>{56DF7A98-063D-FB9D-485C-089023B4C16A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C:\Users\kty89\Desktop\React Electron Test\First-React-Electorn-Windows-App\node_modules\node-gyp">
+      <UniqueIdentifier>{77348C0E-2034-7791-74D5-63C077DF5A3B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C:\Users\kty89\Desktop\React Electron Test\First-React-Electorn-Windows-App\node_modules\node-gyp\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\test.cpp">
+      <Filter>..</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\kty89\Desktop\React Electron Test\First-React-Electorn-Windows-App\node_modules\node-gyp\src\win_delay_load_hook.cc">
+      <Filter>C:\Users\kty89\Desktop\React Electron Test\First-React-Electorn-Windows-App\node_modules\node-gyp\src</Filter>
+    </ClCompile>
+    <None Include="..\binding.gyp">
+      <Filter>..</Filter>
+    </None>
+  </ItemGroup>
+</Project>

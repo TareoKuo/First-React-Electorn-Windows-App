@@ -5,8 +5,6 @@ import testok from '../../release/app/test';
 testok();
 
 
-// import * as ffi from "ffi-napi";
-
 // console.log("HIIIIIIIIIIIIIIIII");
 // console.log(ffi);
 // const libm  = new ffi.Library('./Dll1.dll', {

@@ -30,8 +30,10 @@ const path = require('path')
 //   })
 // }
 
+// const testAddon = require('testaddon');
+// console.log('addon', testAddon);
 
-
+// var ffi = require('./node_modules/ffi-napi/bin/win32-x64-113/ffi-napi.node');
 var ffi = require('ffi-napi');
 // const libm  = ffi.Library('./Dll1.dll', {
 //     'get_cpu_info':[ 'string',[]]
@@ -39,7 +41,6 @@ var ffi = require('ffi-napi');
 const testok = () => {
     console.log("------------------");
     console.log(edge);
-    console.log(ffi);
     console.log("------------------");
 }
 

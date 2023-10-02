@@ -17,6 +17,10 @@
   "dependencies": {
     "electron-edge-js": "^23.0.0",
     "ffi-napi": "^4.0.3",
+    "node-addon-api": "^7.0.0",
     "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@types/ffi-napi": "^4.0.8"
   }
 }
